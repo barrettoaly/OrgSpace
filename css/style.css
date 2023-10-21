@@ -1,8 +1,8 @@
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
-  Project:	Marshmello Admin
-  Version:	1.0.0
+  Project:  Marshmello Admin
+  Version:  1.0.0
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
   ===== Table of Contents =====
@@ -8559,7 +8559,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #5E50F9;
+  --blue: #060297  ;
   --indigo: #6610f2;
   --purple: #6a008a;
   --pink: #E91E63;
@@ -8631,6 +8631,7 @@ body {
   color: #6c7293;
   text-align: left;
   background-color: #fff;
+ 
 }
 
 [tabindex="-1"]:focus {
@@ -12261,7 +12262,8 @@ input[type="button"].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #007bff;
+  background-color: #060297
+  ;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -12291,7 +12293,8 @@ input[type="button"].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #007bff;
+  background-color: #060297
+  ;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -12324,7 +12327,7 @@ input[type="button"].btn-block {
   margin-top: 0;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
-  background-color: #007bff;
+  background-color: #060297  ;
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -12404,10 +12407,12 @@ input[type="button"].btn-block {
   list-style: none;
 }
 
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
 }
+
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -12463,7 +12468,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #060297  ;
 }
 
 .nav-fill .nav-item {
@@ -12500,6 +12505,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .navbar-brand {
@@ -13974,17 +13980,27 @@ a.close.disabled {
 }
 
 .modal {
-  position: fixed;
-  top: 0;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
   left: 0;
-  z-index: 1050;
-  display: none;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  outline: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 .modal-dialog {
   position: relative;
   width: auto;
@@ -13997,6 +14013,20 @@ a.close.disabled {
   transform: translate(0, -50px);
 }
 
+/* The Close Button */
+.close1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
@@ -14052,18 +14082,6 @@ a.close.disabled {
   content: none;
 }
 
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-}
 
 .modal-backdrop {
   position: fixed;
@@ -16025,6 +16043,7 @@ button.bg-dark:focus {
 .mr-3,
 .mx-3 {
   margin-right: 1rem !important;
+  
 }
 
 .mb-3,
@@ -18357,9 +18376,14 @@ h6, .h6 {
 
 .footer {
   color: #e5e5e5;
-  background: #3c37f1 url(../images/footer_bg.svg);
+  background: #060297 url(../images/footer_bg.svg);
   background-size: cover;
   background-position: left bottom;
+}
+#footer-name{
+
+  color:white;
+  
 }
 
 .footer p {
@@ -18368,16 +18392,17 @@ h6, .h6 {
 
 .footer .footer-link {
   color: #e5e5e5;
+
 }
 
 .footer .footer-top {
-  padding: 74px 0;
+  padding: 20px 0;
 }
 
 .footer .footer-top .footer-title {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: .875rem;
+  margin-bottom: .50rem;
 }
 
 .footer .footer-top .social-icons {
@@ -18401,7 +18426,7 @@ h6, .h6 {
 
 .footer .footer-bottom {
   background: rgba(255, 255, 255, 0.07);
-  padding: 30px 0;
+  padding: 15px 0;
   border-top: 1px solid rgba(151, 151, 151, 0.07);
 }
 
@@ -18425,7 +18450,7 @@ h6, .h6 {
 .navbar {
   width: 100%;
   padding: 1.875rem 1rem;
-  background: #3c37f1;
+  background: #060297  ;
 }
 
 @media (max-width: 991px) {
@@ -18480,6 +18505,7 @@ h6, .h6 {
 @media (max-width: 991px) {
   .navbar .navbar-nav .nav-item:last-child {
     margin-left: 0;
+
   }
 }
 
@@ -18509,12 +18535,17 @@ h6, .h6 {
 }
 
 .navbar .navbar-nav .nav-item .nav-link.active {
-  background: rgba(0, 0, 0, 0.2);
+  background-color: #1998ff;  /*edit here*/
+  border-color: #1998ff;
   border-radius: 50px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link:focus {
   border-radius: 50px;
+    color: #fff;
+    background-color: #0085f2;
+    border-color: #007ee5;
+  
 }
 
 .navbar .navbar-nav .nav-item:last-child .nav-link.active {
